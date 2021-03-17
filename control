@@ -1,0 +1,8 @@
+Package: com.propr.joe
+Name: Joe
+Version: 0.2.1
+Architecture: iphoneos-arm
+Description: joe mama made a customization tweak
+Maintainer: propr
+Section: Tweaks
+Depends: mobilesubstrate (>= 0.9.5000)
