@@ -33,38 +33,39 @@ int getIntSetting(NSString* setting) {
 // hide dock background
 %hook SBDockView
 
-	-(void)setBackgroundView:(UIView *)arg1 {
-		if (getBoolSetting(@"hideDockBG")) {
-			%orig(nil);
-		} else {
-			%orig;
-		}
+- (void)setBackgroundView:(UIView *)arg1 {
+	if (getBoolSetting(@"hideDockBG")) {
+		%orig(nil);
+	} else {
+		%orig;
 	}
+}
 	
 %end
 
 // hide dock background 2 electric boogaloo
 %hook SBFloatingDockView
 
-	-(void)setBackgroundView:(UIView *)arg1 {
-		if (getBoolSetting(@"hideDockBG")) {
-			%orig(nil);
-		} else {
-			%orig;
-		}
+- (void)setBackgroundView:(UIView *)arg1 {
+	if (getBoolSetting(@"hideDockBG")) {
+		%orig(nil);
+	} else {
+		%orig;
 	}
+}
 
 %end
 
 // hide folder icon background
 %hook SBFolderIconImageView
-	-(void)setBackgroundView:(id)bgView {
-		if (getBoolSetting(@"hideFolderIconBG")) {
-			bgView = nil;
-		} else {
-			%orig;
-		}
+
+- (void)setBackgroundView:(id)bgView {
+	if (getBoolSetting(@"hideFolderIconBG")) {
+		bgView = nil;
+	} else {
+		%orig;
 	}
+}
 	
 %end
 
@@ -84,60 +85,60 @@ int getIntSetting(NSString* setting) {
 // hide app label
 %hook SBIconView
 
-	-(void)setLabelHidden:(BOOL)hidden {
-		if (getBoolSetting(@"hideLabel")) {
-			%orig(YES);
-		} else {
-			%orig;
-		}
+- (void)setLabelHidden:(BOOL)hidden {
+	if (getBoolSetting(@"hideLabel")) {
+		%orig(YES);
+	} else {
+		%orig;
 	}
+}
 
 %end
 
 // hide testflight dot
 %hook SBIconBetaLabelAccessoryView
 
-	-(void)setAlpha:(double)alpha {
-		if (getBoolSetting(@"hideTestflight")) {
-			%orig(0.0);
-		} else {
-			return %orig;
-		}
+- (void)setAlpha:(double)alpha {
+	if (getBoolSetting(@"hideTestflight")) {
+		%orig(0.0);
+	} else {
+		return %orig;
 	}
+}
 
 %end
 
 // hide folder background
 %hook SBFolderBackgroundView
 	
-	-(void)setAlpha:(double)alpha {
-		if (getBoolSetting(@"hideFolderBG")) {
-			%orig(0.0);
-		} else {
-			return %orig;
-		}
+- (void)setAlpha:(double)alpha {
+	if (getBoolSetting(@"hideFolderBG")) {
+		%orig(0.0);
+	} else {
+		return %orig;
 	}
+}
 
 %end
 
 // hide notification badges
 %hook SBIconBadgeView
 
-	-(BOOL)isHidden {
-		if (getBoolSetting(@"hideNotificationBadges")) {
-			return YES;
-		} else {
-			return NO;
-		}
+- (BOOL)isHidden {
+	if (getBoolSetting(@"hideNotificationBadges")) {
+		return YES;
+	} else {
+		return NO;
 	}
+}
 	
-	-(void)setAlpha:(double)alpha {
-		if (getBoolSetting(@"hideNotificationBadges")) {
-			%orig(0.0);
-		} else {
-			return %orig;
-		}
+- (void)setAlpha:(double)alpha {
+	if (getBoolSetting(@"hideNotificationBadges")) {
+		%orig(0.0);
+	} else {
+		return %orig;
 	}
+}
 
 %end
 
