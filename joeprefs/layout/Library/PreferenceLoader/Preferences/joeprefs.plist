@@ -11,7 +11,7 @@
 		<key>detail</key>
 		<string>joeRootListController</string>
 		<key>icon</key>
-		<string>icon.png</string>
+		<string>joeprefs</string>
 		<key>isController</key>
 		<true/>
 		<key>label</key>

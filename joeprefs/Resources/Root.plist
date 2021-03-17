@@ -128,7 +128,7 @@
 			<key>label</key>
 			<string>Set Number of Dock Icons</string>
 			<key>default</key>
-			<integer>4</integer>
+			<string>4</string>
 		</dict>
 
 		<dict>
