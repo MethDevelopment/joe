@@ -1,5 +1,5 @@
-#include "joeRootListController.h"
-#include <spawn.h>
+#import "joeRootListController.h"
+#import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
 #import <Preferences/PSSpecifier.h>
 #import <Preferences/PSListController.h>

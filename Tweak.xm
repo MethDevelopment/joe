@@ -21,13 +21,13 @@ Set Number of Dock Icons
 
 #define TWEAK_PREFS_PATH @"/var/mobile/Library/Preferences/com.propr.joeprefs.plist"
 
+static NSUserDefaults *prefs = [[NSUserDefaults alloc] initWithSuiteName:TWEAK_PREFS_PATH];
+
 BOOL getBoolSetting(NSString* setting) {
-    static NSUserDefaults *prefs = [[NSUserDefaults alloc] initWithSuiteName:TWEAK_PREFS_PATH];
     return [[prefs objectForKey:setting] ?: @NO boolValue];
 }
 
 int getIntSetting(NSString* setting) {
-    static NSUserDefaults *prefs = [[NSUserDefaults alloc] initWithSuiteName:TWEAK_PREFS_PATH];
     return [[prefs objectForKey:setting] intValue];
 }
 
