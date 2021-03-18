@@ -10,6 +10,7 @@ Hide Page Dots
 Hide Icon Labels
 Hide Testflight Dot
 Hide Notification Badges
+Hide App Library Blur
 Set Number of Dock Icons
 
 
@@ -156,6 +157,19 @@ int getIntSetting(NSString* setting) {
 	}
 	
 	return %orig;
+}
+
+%end
+
+// hide app library folder blur
+%hook SBHLibraryCategoryPodBackgroundView
+
+- (void)setAlpha:(double)alpha {
+	if (getBoolSetting(@"hideAppLibraryBlur")) {
+		%orig(0.0);
+	} else {
+		return %orig;
+	}
 }
 
 %end

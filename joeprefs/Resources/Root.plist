@@ -118,6 +118,21 @@
 
 		<dict>
 			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<false/>
+			<key>defaults</key>
+			<string>com.propr.joeprefs</string>
+			<key>key</key>
+			<string>hideAppLibraryBlur</string>
+			<key>label</key>
+			<string>Hide App Library Folder Blur</string>
+			<key>default</key>
+			<false/>
+		</dict>
+
+		<dict>
+			<key>cell</key>
 			<string>PSEditTextCell</string>
 			<key>defaults</key>
 			<string>com.propr.joeprefs</string>
