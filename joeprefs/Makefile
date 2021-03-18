@@ -4,7 +4,7 @@ include $(THEOS)/makefiles/common.mk
 
 BUNDLE_NAME = joeprefs
 
-joeprefs_FILES = joeRootListController.m
+joeprefs_FILES = joeRootListController.m HomeScreenListController.m
 joeprefs_FRAMEWORKS = UIKit
 joeprefs_PRIVATE_FRAMEWORKS = Preferences
 joeprefs_INSTALL_PATH = /Library/PreferenceBundles

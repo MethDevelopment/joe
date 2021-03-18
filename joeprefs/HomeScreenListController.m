@@ -1,16 +1,14 @@
-#include "joeRootListController.h"
-#include <spawn.h>
+#include "HomeScreenListController.h"
 #import <Foundation/Foundation.h>
 #import <Preferences/PSSpecifier.h>
 #import <Preferences/PSListController.h>
-
 
 @interface NSTask : NSObject
 @property NSString *launchPath;
 - (void)launch;
 @end
 
-@implementation joeRootListController
+@implementation HomeScreenListController
 - (NSMutableArray *)specifiers {
     if (_specifiers == nil) {
         _specifiers = [self loadSpecifiersFromPlistName:@"Root" target:self];
