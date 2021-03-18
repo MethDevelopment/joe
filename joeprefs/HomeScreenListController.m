@@ -11,7 +11,7 @@
 @implementation HomeScreenListController
 - (NSMutableArray *)specifiers {
     if (_specifiers == nil) {
-        _specifiers = [self loadSpecifiersFromPlistName:@"Root" target:self];
+        _specifiers = [self loadSpecifiersFromPlistName:@"HomeScreenListController" target:self];
         UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithTitle:@"Respring" style:UIBarButtonItemStylePlain target:self action:@selector(didTapRespring)];
         self.navigationItem.rightBarButtonItem = item;
     }
