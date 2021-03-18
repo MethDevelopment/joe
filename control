@@ -5,4 +5,4 @@ Architecture: iphoneos-arm
 Description: joe mama made a customization tweak
 Maintainer: propr
 Section: Tweaks
-Depends: mobilesubstrate (>= 0.9.5000)
+Depends: mobilesubstrate, preferenceloader, firmware (>=14.0)
