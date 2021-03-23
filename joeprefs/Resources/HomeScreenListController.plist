@@ -22,8 +22,6 @@
 			<string>hideDockBG</string>
 			<key>label</key>
 			<string>Hide Dock Background</string>
-			<key>default</key>
-			<false/>
 		</dict>
 
 		<dict>
@@ -37,8 +35,6 @@
 			<string>hideFolderIconBG</string>
 			<key>label</key>
 			<string>Hide Folder Icon Background</string>
-			<key>default</key>
-			<false/>
 		</dict>
 
 		<dict>
@@ -52,8 +48,6 @@
 			<string>hideFolderBG</string>
 			<key>label</key>
 			<string>Hide Folder Background</string>
-			<key>default</key>
-			<false/>
 		</dict>
 
 		<dict>
@@ -66,9 +60,7 @@
 			<key>key</key>
 			<string>hidePageDots</string>
 			<key>label</key>
-			<string>Hide Page Dots</string>
-			<key>default</key>
-			<false/>
+			<string>Hide Page Dots (broken)</string>
 		</dict>
 
 		<dict>
@@ -82,8 +74,6 @@
 			<string>hideLabel</string>
 			<key>label</key>
 			<string>Hide Icon Labels</string>
-			<key>default</key>
-			<false/>
 		</dict>
 
 		<dict>
@@ -97,8 +87,6 @@
 			<string>hideTestflight</string>
 			<key>label</key>
 			<string>Hide Testflight Dot</string>
-			<key>default</key>
-			<false/>
 		</dict>
 
 		<dict>
@@ -112,8 +100,6 @@
 			<string>hideNotificationBadges</string>
 			<key>label</key>
 			<string>Hide Notification Badges</string>
-			<key>default</key>
-			<false/>
 		</dict>
 
 		<dict>
@@ -127,8 +113,6 @@
 			<string>hideAppLibraryBlur</string>
 			<key>label</key>
 			<string>Hide App Library Folder Blur</string>
-			<key>default</key>
-			<false/>
 		</dict>
 
 		<dict>

@@ -8,35 +8,22 @@
 			<key>cell</key>
 			<string>PSGroupCell</string>
 			<key>label</key>
-			<string>Joe</string>
-		</dict>
-
-		<dict>
-			<key>cell</key>
-			<string>PSLinkCell</string>
-			<key>defaults</key>
-			<string>com.propr.joeprefs</string>
-			<key>detail</key>
-			<string>SystemWideListController</string>
-			<key>isController</key>
-			<true/>
-			<key>label</key>
 			<string>System-wide Settings</string>
 		</dict>
 
 		<dict>
 			<key>cell</key>
-			<string>PSLinkCell</string>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<false/>
 			<key>defaults</key>
 			<string>com.propr.joeprefs</string>
-			<key>detail</key>
-			<string>HomeScreenListController</string>
-			<key>isController</key>
-			<true/>
+			<key>key</key>
+			<string>hideStatusBar</string>
 			<key>label</key>
-			<string>Home Screen Settings</string>
+			<string>Hide Status Bar</string>
 		</dict>
-		
+
 	</array>
 	<key>title</key>
 	<string>Joe</string>
