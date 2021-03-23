@@ -174,6 +174,32 @@ int getIntSetting(NSString* setting) {
 
 %end
 
+// hide status bar
+%hook UIStatusBar_Modern
+
+- (void)setStatusBar:(id)porn {
+	if (getBoolSetting(@"hideStatusBar")) {
+		return %orig(nil);
+	} else {
+		return %orig;
+	}
+}
+
+%end
+
+// hide folder title
+%hook SBFolderTitleTextField
+
+- (BOOL)isHidden {
+	return YES;
+}
+
+- (void)setText:(NSString*)balls {
+	%orig(@"");
+}
+
+%end
+
 %ctor {
     NSString *bundleID = NSBundle.mainBundle.bundleIdentifier;
     if ([bundleID isEqualToString:@"com.apple.springboard"]) {
