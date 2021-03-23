@@ -11,6 +11,8 @@
 * Hide Testflight Dot
 * Hide Notification Badges
 * Hide App Library Blur
+* Hide Folder Title
+* Hide Status Bar
 * Set Number of Dock Icons
 
 ## Building
