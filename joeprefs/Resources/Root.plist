@@ -36,6 +36,19 @@
 			<key>label</key>
 			<string>Home Screen Settings</string>
 		</dict>
+
+		<dict>
+			<key>cell</key>
+			<string>PSLinkCell</string>
+			<key>defaults</key>
+			<string>com.propr.joeprefs</string>
+			<key>detail</key>
+			<string>LockScreenListController</string>
+			<key>isController</key>
+			<true/>
+			<key>label</key>
+			<string>Lock Screen Settings</string>
+		</dict>
 		
 	</array>
 	<key>title</key>
