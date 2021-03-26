@@ -14,6 +14,8 @@ Hide App Library Blur
 Hide Status Bar
 Hide Folder Title
 Disable Icon Fly
+Hide Quick Actions
+Hide Lock (Notched Devices Only)
 Set Number of Dock Icons
 
 
@@ -217,6 +219,60 @@ int getIntSetting(NSString* setting) {
 - (BOOL)iconsFlyIn {
 	if (getBoolSetting(@"hideIconFly")) {
 		return NO;
+	} else {
+		return %orig;
+	}
+}
+
+%end
+
+// hide lock in lock screen (notched only)
+%hook SBUIProudLockIconView
+
+- (BOOL)isHidden {
+	if (getBoolSetting(@"hideLockIcon")) {
+		return YES;
+	} else {
+		return %orig;
+	}
+}
+
+- (void)setAlpha:(double)alpha {
+	if (getBoolSetting(@"hideLockIcon")) {
+		%orig(0.0);
+	} else {
+		return %orig;
+	}
+}
+
+%end
+
+// hide quick actions
+%hook CSQuickActionsView
+
+- (BOOL)isHidden {
+	if (getBoolSetting(@"hideQuickActions")) {
+		return YES;
+	} else {
+		return %orig;
+	}
+}
+
+- (void)setAlpha:(double)alpha {
+	if (getBoolSetting(@"hideQuickActions")) {
+		return %orig(0.0);
+	} else {
+		return %orig;
+	}
+}
+
+%end
+
+%hook CSQuickActionsButton
+
+- (BOOL)isHidden {
+	if (getBoolSetting(@"hideQuickActions")) {
+		return YES;
 	} else {
 		return %orig;
 	}
