@@ -13,6 +13,7 @@ Hide Notification Badges
 Hide App Library Blur
 Hide Status Bar
 Hide Folder Title
+Disable Icon Fly
 Set Number of Dock Icons
 
 
@@ -193,11 +194,32 @@ int getIntSetting(NSString* setting) {
 %hook SBFolderTitleTextField
 
 - (BOOL)isHidden {
-	return YES;
+	if (getBoolSetting(@"hideFolderTitle")) {
+		return YES;
+	} else {
+		return %orig;
+	}
 }
 
 - (void)setText:(NSString*)balls {
-	%orig(@"");
+		if (getBoolSetting(@"hideFolderTitle")) {
+		return %orig(@"");
+	} else {
+		return %orig;
+	}
+}
+
+%end
+
+// disable icon fly
+%hook CSCoverSheetTransitionSettings
+
+- (BOOL)iconsFlyIn {
+	if (getBoolSetting(@"hideIconFly")) {
+		return NO;
+	} else {
+		return %orig;
+	}
 }
 
 %end
