@@ -13,6 +13,7 @@
 * Hide App Library Blur
 * Hide Folder Title
 * Hide Status Bar
+* Disable Icon Fly
 * Set Number of Dock Icons
 
 ## Building
