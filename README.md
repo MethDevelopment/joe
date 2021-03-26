@@ -14,6 +14,8 @@
 * Hide Folder Title
 * Hide Status Bar
 * Disable Icon Fly
+* Hide Quick Actions
+* Hide Lock Icon (Notched Only)
 * Set Number of Dock Icons
 
 ## Building
