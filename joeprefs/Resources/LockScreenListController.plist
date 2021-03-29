@@ -37,6 +37,45 @@
 			<string>Hide Lock Icon (notched only)</string>
 		</dict>
 
+		<dict>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<false/>
+			<key>defaults</key>
+			<string>com.propr.joeprefs</string>
+			<key>key</key>
+			<string>compactDate</string>
+			<key>label</key>
+			<string>Use Compact Date Format</string>
+		</dict>
+
+		<dict>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<false/>
+			<key>defaults</key>
+			<string>com.propr.joeprefs</string>
+			<key>key</key>
+			<string>hideDate</string>
+			<key>label</key>
+			<string>Hide Date</string>
+		</dict>
+
+		<dict>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<false/>
+			<key>defaults</key>
+			<string>com.propr.joeprefs</string>
+			<key>key</key>
+			<string>hideOlderNotifications</string>
+			<key>label</key>
+			<string>Hide No Older Notifications</string>
+		</dict>
+
 	</array>
 	<key>title</key>
 	<string>Joe</string>
