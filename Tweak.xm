@@ -16,6 +16,9 @@ Hide Folder Title
 Disable Icon Fly
 Hide Quick Actions
 Hide Lock (Notched Devices Only)
+Hide "No Older Notifications"
+Hide Date
+Use Compact Date Format
 Set Number of Dock Icons
 
 
@@ -273,6 +276,69 @@ int getIntSetting(NSString* setting) {
 - (BOOL)isHidden {
 	if (getBoolSetting(@"hideQuickActions")) {
 		return YES;
+	} else {
+		return %orig;
+	}
+}
+
+%end
+
+// use compact date format
+%hook SBFLockScreenDateView
+
+- (void)setUseCompactDateFormat:(BOOL)isHidden {
+	if (getBoolSetting(@"compactDate")) {
+		return %orig(YES);
+	} else {
+		return %orig;
+	}
+}
+
+%end
+
+// hide date
+%hook SBFLockScreenDateView
+
+- (BOOL)isHidden {
+	if (getBoolSetting(@"hideDate")) {
+		return YES;
+	} else {
+		return %orig;
+	}
+}
+
+- (void)setAlpha:(double)alpha {
+	if (getBoolSetting(@"hideDate")) {
+		return %orig(0.0);
+	} else {
+		return %orig;
+	}
+}
+
+%end
+
+// hide no older notifications
+%hook NCNotificationListSectionRevealHintView
+
+- (BOOL)isHidden {
+	if (getBoolSetting(@"hideOlderNotifications")) {
+		return YES;
+	} else {
+		return NO;
+	}
+}
+
+- (void)setForceRevealed:(BOOL)ok {
+	if (getBoolSetting(@"hideOlderNotifications")) {
+		return %orig(YES);
+	} else {
+		return %orig;
+	}
+}
+
+- (void)setRevealPercentage:(CGFloat)balls {
+	if (getBoolSetting(@"hideOlderNotifications")) {
+		return %orig(0);
 	} else {
 		return %orig;
 	}
