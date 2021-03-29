@@ -16,6 +16,9 @@
 * Disable Icon Fly
 * Hide Quick Actions
 * Hide Lock Icon (Notched Only)
+* Hide Date
+* Use Compact Date Format
+* Hide "No Older Notifications"
 * Set Number of Dock Icons
 
 ## Building
