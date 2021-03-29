@@ -28,4 +28,4 @@
 4. Run `make do`
 
 ## Contact
-You can contact me on discord, propr#8888. You can also contact me on [Twitter](https://twitter.com/proprdev) or [email](mailto:propruhh@gmail.com).
+You can contact me on Discord, propr#8888. You can also contact me on [Twitter](https://twitter.com/proprdev) or [email](mailto:propruhh@gmail.com).
