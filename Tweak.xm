@@ -19,6 +19,9 @@ Hide Lock (Notched Devices Only)
 Hide "No Older Notifications"
 Hide Date
 Use Compact Date Format
+Hide Home Bar (Only in SpringBoard)
+Hide Control Center Grabber
+Hide Swipe up to Unlock
 Set Number of Dock Icons
 
 
@@ -339,6 +342,86 @@ int getIntSetting(NSString* setting) {
 - (void)setRevealPercentage:(CGFloat)balls {
 	if (getBoolSetting(@"hideOlderNotifications")) {
 		return %orig(0);
+	} else {
+		return %orig;
+	}
+}
+
+%end
+
+// hide home bar and hide cc grabber and swipe to unlock
+%hook CSTeachableMomentsContainerView
+
+// hide control center grabber
+- (void)setControlCenterGrabberView:(id)ccView {
+	if (getBoolSetting(@"hideCCGrabber")) {
+		return %orig(nil);
+	} else {
+		return %orig;
+	}
+}
+
+- (void)setControlCenterGrabberEffectContainerView:(id)ccView {
+	if (getBoolSetting(@"hideCCGrabber")) {
+		return %orig(nil);
+	} else {
+		return %orig;
+	}
+}
+
+- (void)setControlCenterTutorsContainerView:(id)ccView {
+	if (getBoolSetting(@"hideCCGrabber")) {
+		return %orig(nil);
+	} else {
+		return %orig;
+	}
+}
+
+- (void)setControlCenterGrabberPositionPlaceholderView:(id)ccView {
+	if (getBoolSetting(@"hideCCGrabber")) {
+		return %orig(nil);
+	} else {
+		return %orig;
+	}
+}
+
+// hide home bar
+- (void)setHomeAffordanceContainerView:(id)homeView {
+	if (getBoolSetting(@"hideHomeBar")) {
+		return %orig(nil);
+	} else {
+		return %orig;
+	}
+}
+
+- (void)setHomeAffordanceView:(id)homeView {
+	if (getBoolSetting(@"hideHomeBar")) {
+		return %orig(nil);
+	} else {
+		return %orig;
+	}
+}
+
+// hide swipe to unlock
+- (void)setCallToActionLabel:(id)label {
+	if (getBoolSetting(@"hideSwipeToUnlock")) {
+		return %orig(nil);
+	} else {
+		return %orig;
+	}
+}
+
+- (void)setCallToActionLabelContainerView:(id)label {
+	if (getBoolSetting(@"hideSwipeToUnlock")) {
+		return %orig(nil);
+	} else {
+		return %orig;
+	}
+}
+
+- (void)setCallToActionLabelPositionPlaceholderView:(id)label {
+	if (getBoolSetting(@"hideSwipeToUnlock")) {
+		return %orig(nil);
 	} else {
 		return %orig;
 	}
