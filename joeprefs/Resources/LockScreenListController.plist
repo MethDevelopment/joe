@@ -76,6 +76,45 @@
 			<string>Hide No Older Notifications</string>
 		</dict>
 
+		<dict>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<false/>
+			<key>defaults</key>
+			<string>com.propr.joeprefs</string>
+			<key>key</key>
+			<string>hideCCGrabber</string>
+			<key>label</key>
+			<string>Hide Control Center Grabber</string>
+		</dict>
+
+		<dict>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<false/>
+			<key>defaults</key>
+			<string>com.propr.joeprefs</string>
+			<key>key</key>
+			<string>hideSwipeToUnlock</string>
+			<key>label</key>
+			<string>Hide Swipe Up to Unlock</string>
+		</dict>
+
+		<dict>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<false/>
+			<key>defaults</key>
+			<string>com.propr.joeprefs</string>
+			<key>key</key>
+			<string>hideHomeBar</string>
+			<key>label</key>
+			<string>Hide Home Bar</string>
+		</dict>
+
 	</array>
 	<key>title</key>
 	<string>Joe</string>
