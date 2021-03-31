@@ -1,9 +1,9 @@
 # joe
 
 ## Features
-### System-wide Settings
+#### System-wide Features
 * Hide Status Bar
-### Home Screen Settings
+#### Home Screen Features
 * Hide Dock Background
 * Hide Folder Background
 * Hide Folder Icon Background
@@ -15,15 +15,12 @@
 * Hide Folder Title
 * Disable Icon Fly
 * Set Number of Dock Icons
-### Lock Screen Settings
-* Hide Home Bar
+#### Lock Screen Features
 * Hide Quick Actions
 * Hide Lock Icon (Notched Only)
 * Hide Date
 * Use Compact Date Format
 * Hide "No Older Notifications"
-* Hide Control Center Grabber
-* Hide Swipe up to Unlock
 
 ## Building
 1. Install [theos](https://github.com/theos/theos/wiki/Installation)
