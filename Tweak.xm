@@ -100,7 +100,7 @@ int getIntSetting(NSString* setting) {
 	}
 }
 
--(BOOL)actsAsButton {
+- (BOOL)actsAsButton {
 	if (getBoolSetting(@"hidePageDots")) {
 		return NO;
 	} else {
