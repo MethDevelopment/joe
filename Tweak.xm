@@ -84,16 +84,17 @@ int getIntSetting(NSString* setting) {
 // hide page dots
 %hook SBIconListPageControl
 
-- (BOOL)isHidden {
-	if (getBoolSetting(@"hidePageDots")) {
-		return YES;
-	} else {
-		return NO;
-	}
+-(void)setAlpha:(double)alpha{
+	%orig(0.0);
 }
-	
-%end
+- (BOOL)isHidden {
+	return YES;
+}
 
+-(BOOL)actsAsButton{
+	return NO;
+}
+%end
 // hide app label
 %hook SBIconView
 
