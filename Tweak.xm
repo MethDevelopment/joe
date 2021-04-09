@@ -86,9 +86,9 @@ int getIntSetting(NSString* setting) {
 
 - (void)setAlpha:(double)alpha {
 	if (getBoolSetting(@"hidePageDots")) {
-		%orig(0.0);
+		return %orig(0.0);
 	} else {
-		%orig;
+		return %orig;
 	}
 }
 
@@ -96,7 +96,7 @@ int getIntSetting(NSString* setting) {
 	if (getBoolSetting(@"hidePageDots")) {
 		return YES;
 	} else {
-		return NO;
+		return %orig;
 	}
 }
 
@@ -104,7 +104,7 @@ int getIntSetting(NSString* setting) {
 	if (getBoolSetting(@"hidePageDots")) {
 		return NO;
 	} else {
-		return YES;
+		return %orig;
 	}
 }
 
