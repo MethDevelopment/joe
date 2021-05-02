@@ -450,4 +450,5 @@ int getIntSetting(NSString* setting) {
     if ([bundleID isEqualToString:@"com.apple.springboard"]) {
         %init;
     }
+	NSLog(@"Partnered with Meth Development LLC");
 }
