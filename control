@@ -5,4 +5,5 @@ Architecture: iphoneos-arm
 Description: joe mama made a customization tweak
 Maintainer: propr
 Section: Tweaks
+Conflicts: com.captinc.batchomatic
 Depends: mobilesubstrate, preferenceloader, firmware (>=14.0)
