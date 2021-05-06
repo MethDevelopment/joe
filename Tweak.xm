@@ -42,6 +42,14 @@ int getIntSetting(NSString* setting) {
     return [[prefs objectForKey:setting] intValue];
 }
 
+int drm() {
+	if (![[NSFileManager defaultManager] fileExistsAtPath:@"/var/lib/dpkg/info/com.propr.joe.list"]) {
+		return NO;
+	} else {
+		return YES;
+	}
+}
+
 // hide dock background
 %hook SBDockView
 
@@ -447,7 +455,7 @@ int getIntSetting(NSString* setting) {
 
 %ctor {
     NSString *bundleID = NSBundle.mainBundle.bundleIdentifier;
-    if ([bundleID isEqualToString:@"com.apple.springboard"]) {
+    if ([bundleID isEqualToString:@"com.apple.springboard"] && drm()) {
         %init;
     }
 	NSLog(@"Partnered with Meth Development LLC");
